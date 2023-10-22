@@ -1,0 +1,18 @@
+.custom-table {
+    .table {
+        thead {
+            th {
+                background-color: $light-gray;
+                border-bottom: 1px;
+                font-size: $size-12;
+                color: $gray20;
+                font-weight: $medium;
+            }
+        }
+        tbody {
+            td {
+                font-weight: $regular;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+@import 'variables';
+
+//BASE
+html,
+body {
+    font-family: $font-stack;
+    font-size: $size-12;
+    color: $black;
+    font-weight: $regular;
+}
+
+.heading {
+    font-size: $size-16;
+    font-weight: $semi-bold;
+    color: $gray31;
+}
+
+.sub-title {
+    font-size: $size-14;
+    font-weight: $medium;
+}
+
+.link {
+    color: $blue;
+}
+
+// BUTTONS
+.ptags-primary {
+    color: $white;
+    background-color: $blue;
+    border: 1px solid $blue;
+}
+
+.ptags-secondary {
+    color: $blue;
+    background-color: $white;
+    border: 1px solid $blue;
+}
+
+.gap-0 {
+    gap: 0 !important
+}
+
+.gap-1 {
+    gap: .25rem !important
+}
+
+.gap-2 {
+    gap: .5rem !important
+}
+
+.gap-3 {
+    gap: 1rem !important
+}
+
+.gap-4 {
+    gap: 1.5rem !important
+}
+
+.gap-5 {
+    gap: 3rem !important
+}

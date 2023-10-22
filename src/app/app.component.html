@@ -1,117 +1,802 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div class="ptags-wrapper container-fluid">
-
-    <div class="ptags-nav mb-3">
-        <div class="row justify-content-center">
-            <div class="col-auto mr-auto">
-                Left
-            </div>
-            <div class="col-auto d-flex gap-2">
-                <div class=""><input type="text" class="form-control" placeholder="Search tag"></div>
-                <button type="button" class="btn btn-outline-primary ptags-secondary">
-                    <i class="bi bi-bar-chart-fill"></i>
-                    View summarised performance
-                </button>
-                <button type="button" class="btn btn-outline-primary ptags-secondary">
-                    <i class="bi bi-plus"></i>
-                    Create personalization tag
-                </button>
-
-            </div>
+    <!-- Tab section -->
+    <div class="row justify-content-center">
+        <div class="col-auto d-flex mr-auto">
+            <ul ngbNav #nav="ngbNav" class="nav-tabs custom-tabs">
+                <li [ngbNavItem]="1">
+                    <button ngbNavLink>Active</button>
+                    <ng-template ngbNavContent>
+                        <div class="ptags-content">
+                            <div class="view-option row justify-content-end">
+                                <div class="col-auto d-flex gap-2">
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary"><i class="bi bi-funnel"></i>
+                                        Filter by compaign</button>
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary"><i
+                                            class="bi bi-list-task"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-grid"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-responsive custom-table mt-3">
+                                <table class="table table-sm table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tag name</th>
+                                            <th scope="col"><span class="d-flex gap-2">Activation date <i class="bi bi-info-circle"></i> <i
+                                                        class="bi bi-caret-down-fill"></i></span></th>
+                                            <th scope="col">Associated campaigns</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Deactivate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto ml-auto">
+                                    <ngb-pagination [collectionSize]="70" aria-label="Default pagination"></ngb-pagination>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="2">
+                    <button ngbNavLink>Draft</button>
+                    <ng-template ngbNavContent>
+                        <div class="ptags-content">
+                            <div class="view-option row justify-content-end">
+                                <div class="col-auto d-flex gap-2">                                    
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary"><i
+                                            class="bi bi-list-task"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-grid"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-responsive custom-table mt-3">
+                                <table class="table table-sm table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tag name</th>
+                                            <th scope="col"><span class="d-flex gap-2">Created date <i class="bi bi-info-circle"></i> <i
+                                                        class="bi bi-caret-down-fill"></i></span></th>                                             
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>                                           
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td> 
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem><i class="bi bi-pencil mr-2"></i> Edit</button>
+                                                                <button ngbDropdownItem><i class="bi bi-trash mr-2"></i> Delete</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto ml-auto">
+                                    <ngb-pagination [collectionSize]="70" aria-label="Default pagination"></ngb-pagination>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li [ngbNavItem]="3">
+                    <button ngbNavLink>Inactive</button>
+                    <ng-template ngbNavContent>
+                        <div class="ptags-content">
+                            <div class="view-option row justify-content-end">
+                                <div class="col-auto d-flex gap-2">
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary"><i class="bi bi-funnel"></i>
+                                        Filter by compaign</button>
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary"><i
+                                            class="bi bi-list-task"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary"><i class="bi bi-grid"></i></button>
+                                </div>
+                            </div>
+                            <div class="table-responsive custom-table mt-3">
+                                <table class="table table-sm table-hover table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tag name</th>
+                                            <th scope="col"><span class="d-flex gap-2">Deactivated date <i class="bi bi-info-circle"></i> <i
+                                                        class="bi bi-caret-down-fill"></i></span></th>
+                                            <th scope="col">Associated campaigns</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
+                                            <td>11-10-2023</td>
+                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div ngbDropdown class="d-inline-block">
+                                                            <a type="button" class="custom-dropdown" id="dropdownBasic1" ngbDropdownToggle>
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                <button ngbDropdownItem>Activate tag</button>
+                                                                <button ngbDropdownItem>View performance</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-auto ml-auto">
+                                    <ngb-pagination [collectionSize]="70" aria-label="Default pagination"></ngb-pagination>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+            </ul>
         </div>
-
-    </div>
-    <div class="ptags-content">
-        <div class="view-option row justify-content-end">
-            <div class="col-auto d-flex gap-2">
-                <button type="button" class="btn btn-outline-primary ptags-secondary"><i class="bi bi-funnel"></i> Filter by compaign</button>
-                <button type="button" class="btn btn-outline-primary ptags-secondary"><i class="bi bi-list-task"></i></button>
-                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-grid"></i></button>
-            </div>
+        <div class="col-auto d-flex gap-2">
+            <div class=""><input type="text" class="form-control" placeholder="Search tag"></div>
+            <button type="button" class="btn btn-outline-primary ptags-secondary">
+                <i class="bi bi-bar-chart-fill"></i>
+                View summarised performance
+            </button>
+            <button type="button" class="btn btn-outline-primary ptags-secondary">
+                <i class="bi bi-plus"></i>
+                Create personalization tag
+            </button>
         </div>
-        <div class="table-responsive custom-table mt-3">
-            <table class="table table-sm table-hover table-bordered">
-                <caption>List of users</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Tag name</th>
-                        <th scope="col"><span class="d-flex gap-2">Activation date <i class="bi bi-info-circle"></i> <i class="bi bi-caret-down-fill"></i></span></th>
-                        <th scope="col">Associated campaigns</th> 
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
-                        <td>11-10-2023</td>
-                        <td><a href="javascript:void(0)">6</a></td>
-                        <td>...</td>
-                    </tr>
+    </div>  
 
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <div [ngbNavOutlet]="nav" class="mt-3"></div>
+    <!-- Tab Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 </div>
 

@@ -16,8 +16,8 @@ body {
 }
 
 .sub-title {
-    font-size: $size-14;
     font-weight: $medium;
+    color: $gray40;
 }
 
 .link {
@@ -34,7 +34,16 @@ body {
     color: $blue;
     background-color: $white; 
 }
+.btn-close {
+    color: $black;
+}
+.btn-light {
+    color: #212529;
+    background-color: $white;
+    border-color: $white;
+}
 
+// GAP
 .gap-0 {
     gap: 0 !important
 }
@@ -61,4 +70,11 @@ body {
 
 .rounded-5 {
     border-radius: 5px !important;
+}
+.modal {
+    .modal-header,
+    .modal-footer {
+        border: 0;
+    }    
+    z-index: 1055;
 }

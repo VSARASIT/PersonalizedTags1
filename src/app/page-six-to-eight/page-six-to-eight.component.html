@@ -1,4 +1,29 @@
-<div class="ptags-wrapper container-fluid">
+   <!-- Offcanvas -->
+   <ng-template #content let-offcanvas>
+    <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvas-basic-title">Filter by campaign</h4>
+        <h6 class="sub-title">Select specific campaigns to view its dashboard</h6>
+        <button type="button" class="btn btn-link btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="offcanvas-body">       
+        <div class="mb-3">                
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Select Campaigns</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>            
+        </div>          
+    </div>
+</ng-template> 
+<!-- Offcanvas -->
+
+<div class="ptags-wrapper container-fluid"> 
+
     <!-- Tab section -->
     <div class="row justify-content-center">
         <div class="col-auto d-flex mr-auto">
@@ -9,8 +34,7 @@
                         <div class="ptags-content">
                             <div class="view-option row justify-content-end">
                                 <div class="col-auto d-flex gap-2">
-                                    <button type="button" class="btn btn-outline-primary ptags-secondary"><i
-                                            class="bi bi-funnel"></i>
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary" (click)="open(content)"><i class="bi bi-funnel"></i>
                                         Filter by compaign</button>
                                     <button type="button" class="btn btn-outline-primary ptags-secondary"><i
                                             class="bi bi-list-task"></i></button>
@@ -18,14 +42,36 @@
                                             class="bi bi-grid"></i></button>
                                 </div>
                             </div>
-                            <div class="table-responsive custom-table mt-3">
+                            <!-- Popover Template -->    
+                            <ng-template #popTitle>
+                                <div class="d-flex align-items-center gap-2">                                    
+                                    <div>Associated campaigns</div>
+                                    <div class="pagination gap-1">
+                                        <button type="button" class="btn btn-outline-primary"><i class="bi bi-caret-left-fill"></i></button>
+                                        <button type="button" class="btn btn-outline-primary"><i class="bi bi-caret-right-fill"></i></button>
+                                    </div>                                    
+                                    <button type="button" class="btn btn-link btn-close"aria-label="Close" (click)="p.close()"><i class="bi bi-x-lg"></i></button>
+                                </div> 
+                            </ng-template>
+                            <ng-template #popContent>                                 
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Campaign name appears here </li>
+                                    <li class="list-group-item">Campaign name appears here </li>
+                                    <li class="list-group-item">Campaign name appears here </li>
+                                    <li class="list-group-item">Campaign name appears here </li>
+                                    <li class="list-group-item">Campaign name appears here </li>
+                                </ul> 
+                            </ng-template>
+                            <!-- Popover Template -->   
+                            <div class="table-responsive custom-table mt-3">                               
                                 <table class="table table-sm table-hover table-bordered">
                                     <thead>
                                         <tr>
                                             <th scope="col">Tag name</th>
-                                            <th scope="col"><span class="d-flex gap-2">Activation date <i
-                                                        class="bi bi-info-circle"></i> <i
-                                                        class="bi bi-caret-down-fill"></i></span></th>
+                                            <th scope="col"><span class="d-flex gap-2">Activation date 
+                                                <i class="bi bi-info-circle"></i> 
+                                                <i class="bi bi-caret-down-fill"></i></span>
+                                            </th>
                                             <th scope="col">Associated campaigns</th>
                                             <th scope="col">Actions</th>
                                         </tr>
@@ -34,7 +80,13 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <button type="button" class="btn btn-link" [ngbPopover]="popContent" [popoverTitle]="popTitle" [autoClose]="false" triggers="manual"
+                                                #p="ngbPopover"
+                                                (click)="p.open()">
+                                                   6
+                                                </button>
+                                            </td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -55,7 +107,9 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td>
+                                                <button type="button" class="btn btn-link">6</button>
+                                            </td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -76,7 +130,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -97,7 +151,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -118,7 +172,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -139,7 +193,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -160,7 +214,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -181,7 +235,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -202,7 +256,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -223,7 +277,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -244,7 +298,7 @@
                                         <tr>
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
-                                            <td><a href="javascript:void(0)">6</a></td>
+                                            <td><button type="button" class="btn btn-link">6</button></td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col">
@@ -843,4 +897,10 @@
 
     <div [ngbNavOutlet]="nav" class="mt-3"></div>
     <!-- Tab Section -->
+
+
+    
+   
+ 
+    
 </div>

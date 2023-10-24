@@ -1,31 +1,67 @@
-<div class="ptags-wrapper container-fluid">
+ 
+<div class="ptags-wrapper container-fluid">     
      <div class="row">
         <div class="col-auto d-flex gap-2 align-items-center">
-            <div class="heading">Tag name</div>
-           
-            <button type="button" class="btn btn-outline-primary ptags-secondary"><i
-                class="bi bi-funnel"></i>
-            Filter by compaign</button>   
+            <div class="heading">Tag name</div>           
+            <button type="button" class="btn btn-outline-primary ptags-secondary">
+                <i class="bi bi-funnel"></i> Filter by compaign
+            </button>   
+        </div>
+        <div class="col-auto d-flex gap-2 ml-auto">
+            <!-- Dropdown -->
+            <div class="form-group mb-0">
+                <label for="timePerioddropdown">Time period</label>
+                <div ngbDropdown>
+                    <button type="button" class="btn btn-light" id="timePerioddropdown" ngbDropdownToggle>
+                        Last 7 days
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="timePerioddropdown"> 
+                        <button ngbDropdownItem>Last 30 days</button>
+                        <button ngbDropdownItem>Last 60 days</button>
+                        <button ngbDropdownItem (click)="open(customDateRange)">Custom date range</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Select -->
+            <!-- <div class="form-group mb-0">
+                <label for="timePeriod">Time period</label>
+                <select class="form-control" id="timePeriod">
+                  <option>Last 7 days</option>
+                  <option>Last 30 days</option>
+                  <option>Last 60 days</option>
+                  <option (change)="open(customDateRange)">Custom date range</option>
+                </select>                    
+            </div> -->
+
         </div>
     </div>
-
+ 
     <div class="row mt-3">
         <div class="col-4">
-            <div class="ptags-content rounded-5">
+            <div class="card border-0 rounded-5 p-3">
+                <div class="sub-title mb-3">
+                    Opens
+                </div> 
                 <div class="heading">
                     Value
                 </div> 
             </div>
         </div>
         <div class="col-4">
-            <div class="ptags-content rounded-5">
+            <div class="card border-0 rounded-5 p-3">
+                <div class="sub-title mb-3">
+                    Clicks
+                </div> 
                 <div class="heading">
                     Value
                 </div> 
             </div>
         </div>
         <div class="col-4">
-            <div class="ptags-content rounded-5">
+            <div class="card border-0 rounded-5 p-3">
+                <div class="sub-title mb-3">
+                    Click through rate
+                </div> 
                 <div class="heading">
                     Value
                 </div> 
@@ -35,64 +71,105 @@
     
 
     <!-- Tab section -->
-    <div class="row justify-content-center mt-3">
-        <div class="col-auto d-flex mr-auto">
-            <ul ngbNav #nav="ngbNav" class="nav-tabs custom-tabs">
-                <li [ngbNavItem]="1">
-                    <button ngbNavLink>Open stats</button>
-                    <ng-template ngbNavContent>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="ptags-content rounded-5">
-                                     <div class="heading">
-                                        Opens by top devices
-                                     </div> 
+    <div class="card border-0 rounded-5 p-3 mt-3">
+        <div class="row">
+            <div class="col-auto">            
+                <ul ngbNav #nav="ngbNav" class="nav-tabs custom-tabs">
+                    <li [ngbNavItem]="1">
+                        <button ngbNavLink>Open stats</button>
+                        <ng-template ngbNavContent>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="ptags-content rounded-5">
+                                        <div class="heading">
+                                            Opens by top devices
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="ptags-content rounded-5">
+                                        <div class="heading">
+                                            Open by time of the day
+                                        </div> 
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-6">
-                                <div class="ptags-content rounded-5">
-                                    <div class="heading">
-                                        Open by time of the day
-                                     </div> 
-                                </div>
+                            
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <button ngbNavLink>Trend</button>
+                        <ng-template ngbNavContent>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="ptags-content rounded-5">
+                                        <div class="heading">
+                                            Trend
+                                        </div> 
+                                    </div>
+                                </div>  
                             </div>
-                        </div>
-                        
-                    </ng-template>
-                </li>
-                <li [ngbNavItem]="2">
-                    <button ngbNavLink>Trend</button>
-                    <ng-template ngbNavContent>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="ptags-content rounded-5">
-                                     <div class="heading">
-                                        Trend
-                                     </div> 
-                                </div>
-                            </div>  
-                        </div>
-                    </ng-template>
-                </li>
-                <li [ngbNavItem]="3">
-                    <button ngbNavLink>Top location</button>
-                    <ng-template ngbNavContent>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="ptags-content rounded-5">
-                                     <div class="heading">
-                                        Top locations
-                                     </div> 
-                                </div>
-                            </div> 
-                        </div>
-                    </ng-template>
-                </li>
-            </ul>
-        </div>
-        
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <button ngbNavLink>Top location</button>
+                        <ng-template ngbNavContent>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="ptags-content rounded-5">
+                                        <div class="heading">
+                                            Top locations
+                                        </div> 
+                                    </div>
+                                </div> 
+                            </div>
+                        </ng-template>
+                    </li>
+                </ul>
+            </div>
+        </div>        
     </div>
 
     <div [ngbNavOutlet]="nav" class="mt-3"></div>
     <!-- Tab Section -->
+
+
+
+
+    <ng-template #customDateRange let-c="close" let-d="dismiss">
+        <div class="modal-header align-items-center"> 
+            <h4 class="modal-title" id="modal-basic-title">Custom date range</h4>        
+            <i class="bi bi-question-circle ml-auto mr-2"></i> 
+            <button type="button" class="btn btn-link btn-close"aria-label="Close" (click)="d('Cross click')"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+            <div><p>Time <i class="bi bi-info-circle ml-2"></i></p></div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label for="activationDate" class="sr-only">Activation date</label>
+                        <select class="form-control" id="activationDate">
+                          <option>Activation date</option> 
+                        </select>
+                      </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="toDate" class="sr-only" >To</label>
+                        <select class="form-control" id="toDate">
+                          <option>To</option> 
+                        </select>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer gap-2">
+            <button type="button" class="btn btn-outline-primary" (click)="c('Save click')">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="c('Save click')">Apply</button>
+        </div>
+    </ng-template>
+
 </div>
+
+

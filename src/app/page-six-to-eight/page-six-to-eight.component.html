@@ -1,23 +1,28 @@
    <!-- Offcanvas -->
    <ng-template #content let-offcanvas>
-    <div class="offcanvas-header">
-        <h4 class="offcanvas-title" id="offcanvas-basic-title">Filter by campaign</h4>
-        <h6 class="sub-title">Select specific campaigns to view its dashboard</h6>
-        <button type="button" class="btn btn-link btn-close" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x-lg"></i></button>
+    <div class="offcanvas-header d-flex align-items-center pt-5 pl-5 pr-5">
+        <div class="">
+            <h4 class="offcanvas-title" id="offcanvas-basic-title">Filter by campaign</h4>
+            <h6 class="sub-title">Select specific campaigns to view its dashboard</h6>
+        </div> 
+        <button type="button" class="btn btn-link btn-close ml-auto" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x-lg"></i></button>
     </div>
-    <div class="offcanvas-body">       
+    <div class="offcanvas-body p-5">       
         <div class="mb-3">                
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Select Campaigns</label>
                 <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                    <option>Campaign name</option>
+                    <option>Campaign name</option>
+                    <option>Campaign name</option>
+                    <option>Campaign name</option>
                 </select>
             </div>            
-        </div>          
+        </div>  
+        <div class="mt-5 d-flex gap-2">   
+            <button type="button" class="btn btn-outline-primary" (click)="offcanvas.dismiss('Cancel')">Cancel</button>
+            <button type="button" class="btn btn-primary" (click)="offcanvas.dismiss('Apply')">Apply</button>
+        </div>        
     </div>
 </ng-template> 
 <!-- Offcanvas -->

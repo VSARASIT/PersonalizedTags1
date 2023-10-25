@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageSixToEightComponent } from './page-six-to-eight.component';
+import { ListViewComponent } from './list-view.component';
 
 describe('PageSixToEightComponent', () => {
-  let component: PageSixToEightComponent;
-  let fixture: ComponentFixture<PageSixToEightComponent>;
+  let component: ListViewComponent;
+  let fixture: ComponentFixture<ListViewComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PageSixToEightComponent]
+      declarations: [ListViewComponent]
     });
-    fixture = TestBed.createComponent(PageSixToEightComponent);
+    fixture = TestBed.createComponent(ListViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

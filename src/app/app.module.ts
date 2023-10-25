@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { PageSixToEightComponent } from './page-six-to-eight/page-six-to-eight.component';
-import { PageEighteenComponent } from './page-eighteen/page-eighteen.component';
-import { PageTwentySixComponent } from './page-twenty-six/page-twenty-six.component';
-import { PageTwentySevenComponent } from './page-twenty-seven/page-twenty-seven.component'; 
+import { ListViewComponent } from './list-view/list-view.component';
+import { GraphViewComponent } from './graph-view/graph-view.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageSixToEightComponent,
-    PageEighteenComponent,
-    PageTwentySixComponent,
-    PageTwentySevenComponent,
+    ListViewComponent,
+    GraphViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

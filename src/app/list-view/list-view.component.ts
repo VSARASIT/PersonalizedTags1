@@ -3,11 +3,11 @@ import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbOffcanvas} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-page-six-to-eight',
-  templateUrl: './page-six-to-eight.component.html',
-  styleUrls: ['./page-six-to-eight.component.scss']
+  selector: 'list-view',
+  templateUrl: './list-view.component.html',
+  styleUrls: ['./list-view.component.scss']
 })
-export class PageSixToEightComponent {
+export class ListViewComponent {
   
   closeResult = '';
 
@@ -19,6 +19,12 @@ export class PageSixToEightComponent {
 				this.closeResult = `Closed with: ${result}`;
 			},		 
 		);
+	}
+	cancelFilter(content: any) {
+		
+	}
+	applyFilter(content: any) {
+		
 	}
  
 }

@@ -3,12 +3,12 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-page-eighteen',
-  templateUrl: './page-eighteen.component.html',
-  styleUrls: ['./page-eighteen.component.scss']
+  selector: 'graph-view',
+  templateUrl: './graph-view.component.html',
+  styleUrls: ['./graph-view.component.scss']
   
 })
-export class PageEighteenComponent { 
+export class GraphViewComponent { 
 	 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {
 		// customize default values of modals used by this component tree

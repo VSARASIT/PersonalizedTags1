@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbOffcanvasConfig, NgbPopoverModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbOffcanvas} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -9,9 +9,12 @@ import { NgbOffcanvas} from '@ng-bootstrap/ng-bootstrap';
 })
 export class PageSixToEightComponent {
   
-  closeResult = '';
-
-	constructor(private offcanvasService: NgbOffcanvas) {}
+  closeResult = '';	 
+	constructor(config: NgbOffcanvasConfig, private offcanvasService: NgbOffcanvas) {
+		// customize default values of offcanvas used by this component tree
+		config.position = 'end';
+		config.keyboard = false;
+	}
 
 	open(content: any) {
 		this.offcanvasService.open(content, { ariaLabelledBy: 'offcanvas-basic-title' }).result.then(

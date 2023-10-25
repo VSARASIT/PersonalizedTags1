@@ -1,34 +1,4 @@
-   <!-- Offcanvas -->
-   <ng-template #content let-offcanvas>
-    <div class="offcanvas-header d-flex align-items-center pt-5 pl-5 pr-5">
-        <div class="">
-            <h4 class="offcanvas-title" id="offcanvas-basic-title">Filter by campaign</h4>
-            <h6 class="sub-title">Select specific campaigns to view its dashboard</h6>
-        </div> 
-        <button type="button" class="btn btn-link btn-close ml-auto" aria-label="Close" (click)="offcanvas.dismiss('Cross click')"><i class="bi bi-x-lg"></i></button>
-    </div>
-    <div class="offcanvas-body p-5">       
-        <div class="mb-3">                
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Select Campaigns</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Campaign name</option>
-                    <option>Campaign name</option>
-                    <option>Campaign name</option>
-                    <option>Campaign name</option>
-                </select>
-            </div>            
-        </div>  
-        <div class="mt-5 d-flex gap-2">   
-            <button type="button" class="btn btn-outline-primary" (click)="offcanvas.dismiss('Cancel')">Cancel</button>
-            <button type="button" class="btn btn-primary" (click)="offcanvas.dismiss('Apply')">Apply</button>
-        </div>        
-    </div>
-</ng-template> 
-<!-- Offcanvas -->
-
-<div class="ptags-wrapper container-fluid"> 
-
+<div class="ptags-wrapper container-fluid">
     <!-- Tab section -->
     <div class="row justify-content-center">
         <div class="col-auto d-flex mr-auto">
@@ -39,7 +9,8 @@
                         <div class="ptags-content">
                             <div class="view-option row justify-content-end">
                                 <div class="col-auto d-flex gap-2">
-                                    <button type="button" class="btn btn-outline-primary ptags-secondary" (click)="open(content)"><i class="bi bi-funnel"></i>
+                                    <button type="button" class="btn btn-outline-primary ptags-secondary"
+                                        (click)="open(content)"><i class="bi bi-funnel"></i>
                                         Filter by compaign</button>
                                     <button type="button" class="btn btn-outline-primary ptags-secondary"><i
                                             class="bi bi-list-task"></i></button>
@@ -47,35 +18,38 @@
                                             class="bi bi-grid"></i></button>
                                 </div>
                             </div>
-                            <!-- Popover Template -->    
+                            <!-- Popover Template -->
                             <ng-template #popTitle>
-                                <div class="d-flex align-items-center gap-2">                                    
+                                <div class="d-flex align-items-center gap-2">
                                     <div>Associated campaigns</div>
                                     <div class="pagination gap-1">
-                                        <button type="button" class="btn btn-outline-primary"><i class="bi bi-caret-left-fill"></i></button>
-                                        <button type="button" class="btn btn-outline-primary"><i class="bi bi-caret-right-fill"></i></button>
-                                    </div>                                    
-                                    <button type="button" class="btn btn-link btn-close"aria-label="Close" (click)="p.close()"><i class="bi bi-x-lg"></i></button>
-                                </div> 
+                                        <button type="button" class="btn btn-outline-primary"><i
+                                                class="bi bi-caret-left-fill"></i></button>
+                                        <button type="button" class="btn btn-outline-primary"><i
+                                                class="bi bi-caret-right-fill"></i></button>
+                                    </div>
+                                    <button type="button" class="btn btn-link btn-close" aria-label="Close"
+                                        (click)="p.close()"><i class="bi bi-x-lg"></i></button>
+                                </div>
                             </ng-template>
-                            <ng-template #popContent>                                 
+                            <ng-template #popContent>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Campaign name appears here </li>
                                     <li class="list-group-item">Campaign name appears here </li>
                                     <li class="list-group-item">Campaign name appears here </li>
                                     <li class="list-group-item">Campaign name appears here </li>
                                     <li class="list-group-item">Campaign name appears here </li>
-                                </ul> 
+                                </ul>
                             </ng-template>
-                            <!-- Popover Template -->   
-                            <div class="table-responsive custom-table mt-3">                               
-                                <table class="table table-sm table-hover table-bordered">
+                            <!-- Popover Template -->
+                            <div class="table-responsive custom-table mt-3">
+                                <table class="table table-sm table-hover">
                                     <thead>
                                         <tr>
                                             <th scope="col">Tag name</th>
-                                            <th scope="col"><span class="d-flex gap-2">Activation date 
-                                                <i class="bi bi-info-circle"></i> 
-                                                <i class="bi bi-caret-down-fill"></i></span>
+                                            <th scope="col"><span class="d-flex gap-2">Activation date
+                                                    <i class="bi bi-info-circle"></i>
+                                                    <i class="bi bi-caret-down-fill"></i></span>
                                             </th>
                                             <th scope="col">Associated campaigns</th>
                                             <th scope="col">Actions</th>
@@ -86,10 +60,10 @@
                                             <td scope="row"><a href="javascript:void(0)">Tag name</a></td>
                                             <td>11-10-2023</td>
                                             <td>
-                                                <button type="button" class="btn btn-link" [ngbPopover]="popContent" [popoverTitle]="popTitle" [autoClose]="false" triggers="manual"
-                                                #p="ngbPopover"
-                                                (click)="p.open()">
-                                                   6
+                                                <button type="button" class="btn btn-link" [ngbPopover]="popContent"
+                                                    [popoverTitle]="popTitle" [autoClose]="false" triggers="manual"
+                                                    #p="ngbPopover" (click)="p.open()">
+                                                    6
                                                 </button>
                                             </td>
                                             <td>
@@ -347,7 +321,7 @@
                                 </div>
                             </div>
                             <div class="table-responsive custom-table mt-3">
-                                <table class="table table-sm table-hover table-bordered">
+                                <table class="table table-sm table-hover">
                                     <thead>
                                         <tr>
                                             <th scope="col">Tag name</th>
@@ -629,7 +603,7 @@
                                 </div>
                             </div>
                             <div class="table-responsive custom-table mt-3">
-                                <table class="table table-sm table-hover table-bordered">
+                                <table class="table table-sm table-hover">
                                     <thead>
                                         <tr>
                                             <th scope="col">Tag name</th>
@@ -902,10 +876,33 @@
 
     <div [ngbNavOutlet]="nav" class="mt-3"></div>
     <!-- Tab Section -->
-
-
-    
-   
- 
-    
 </div>
+
+
+<!-- Offcanvas -->
+<ng-template #content let-offcanvas>
+    <div class="offcanvas-header d-flex align-items-center px-4">
+        <div class="">
+            <h4 class="offcanvas-title" id="offcanvas-basic-title">Filter by campaign</h4>
+            <h6 class="sub-title">Select specific campaigns to view its dashboard</h6>
+        </div>        
+    </div>
+    <div class="offcanvas-body px-4 h-100">
+        <div class="mb-3 w-75">
+            <label for="selectCampaigns">Select Campaigns</label>
+            <select class="form-control" id="selectCampaigns">
+                <option>Campaign name</option>
+                <option>Campaign name</option>
+                <option>Campaign name</option>
+                <option>Campaign name</option>
+            </select>            
+        </div>        
+        <div class="d-flex h-75"> 
+            <div class="d-flex align-self-end ml-auto gap-2"> 
+                <button type="button" class="btn btn-outline-primary" (click)="offcanvas.dismiss('Cancel')">Cancel</button>
+                <button type="button" class="btn btn-primary" (click)="offcanvas.dismiss('Apply')">Apply</button>
+            </div> 
+        </div> 
+    </div>
+</ng-template>
+<!-- Offcanvas -->
